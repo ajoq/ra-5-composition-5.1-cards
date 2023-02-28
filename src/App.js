@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
+
+const card1 = {
+    title: 'Card title',
+    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    buttonText: 'Go somewhere',
+    buttonLink: '#',
+};
+
+const card2 = {
+    title: 'Special title treatment',
+    text: 'With supporting text below as a natural lead-in to additional content.',
+    buttonText: 'Click me',
+    buttonLink: '#',
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Card content={card1}>
+                <img
+                    src="https://damion.club/uploads/posts/2022-01/thumbs/1643002124_74-damion-club-p-okras-lisi-82.jpg"
+                    alt="Fox"
+                />
+            </Card>
+            <Card content={card2}></Card>
+        </>
+    );
 }
 
 export default App;
